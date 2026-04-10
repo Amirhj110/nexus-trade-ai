@@ -13,6 +13,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          httpEquiv="Content-Security-Policy"
+          content="default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://query1.finance.yahoo.com https://*.yahoo.com; img-src 'self' data:;"
+        />
+      </head>
       <body className="antialiased">
         {children}
       </body>
