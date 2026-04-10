@@ -48,7 +48,7 @@ export default function Home() {
       setPortfolio(portfolioRes);
     } catch (err) {
       console.error('Failed to fetch stock data:', err);
-      setError('Failed to load data. Please check if the backend is running.');
+      setError('Failed to load stock data. Please try again later.');
     } finally {
       setLoadingChart(false);
       setLoadingPrediction(false);
@@ -63,7 +63,7 @@ export default function Home() {
         setStocks(data);
       } catch (err) {
         console.error('Failed to fetch stocks:', err);
-        setError('Failed to load stocks. Please start the backend server.');
+        setError('Failed to load stocks. Please try again later.');
       } finally {
         setLoadingStocks(false);
       }

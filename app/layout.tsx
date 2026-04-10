@@ -14,10 +14,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta
-          httpEquiv="Content-Security-Policy"
-          content="default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://query1.finance.yahoo.com https://*.yahoo.com; img-src 'self' data:;"
-        />
+        <style dangerouslySetInnerHTML={{ __html: `
+          * { box-sizing: border-box; padding: 0; margin: 0; }
+          html, body {
+            max-width: 100vw;
+            overflow-x: hidden;
+            background-color: #0a0e17;
+            color: #ffffff;
+            font-family: system-ui, -apple-system, sans-serif;
+            min-height: 100vh;
+          }
+          a { color: inherit; text-decoration: none; }
+          input, button, select, textarea { font-family: inherit; }
+        `}} />
       </head>
       <body className="antialiased">
         {children}
