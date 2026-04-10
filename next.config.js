@@ -3,6 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'export',
   distDir: 'dist',
+  basePath: '/nexus-trade-ai',
+  assetPrefix: '/nexus-trade-ai',
   images: {
     unoptimized: true,
   },
