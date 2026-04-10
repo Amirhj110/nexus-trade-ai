@@ -1,0 +1,4 @@
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://query1.finance.yahoo.com https://*.yahoo.com; img-src 'self' data:;
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
